@@ -11,6 +11,12 @@ def compute_loss_mae(y, tx, w):
     """Calculate the loss using mean absolute error"""
     return sum(math.abs(y-np.matmul(tx,w)))/len(y)
 
+def compute_loss_ridge(y, tx, w, lambda_):
+    """Calculate the loss using ridge loss function"""
+    L = compute_loss_mse(y, tx, w)
+    omega = lambda_ * np.dot(w, w)
+    return (L + omega)
+
 def compute_loss(y,tx,w) : 
     return compute_loss_mse(y,tx,w)
 
@@ -74,7 +80,7 @@ def ridge_regression(y, tx, lambda_):
     diagonal_lambda = lambda_prime * np.identity(tx.shape[1])
     
     weight = np.linalg.solve(XX + diagonal_lambda, XY)
-    loss_mse = compute_loss(y, tx, weight)
+    loss_mse = compute_loss_ridge(y, tx, weight, lambda_)
 
     return loss_mse, weight
 

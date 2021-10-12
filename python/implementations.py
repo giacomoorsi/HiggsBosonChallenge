@@ -1,4 +1,6 @@
 import numpy as np
+import math
+from helper import *
 
 def compute_loss_mse(y, tx, w):
     """Calculate the loss using mean square error"""
@@ -23,7 +25,7 @@ def gradient_descent(y, tx, initial_w, max_iters, gamma):
     losses = []
     w = initial_w
     for n_iter in range(max_iters):
-        grad = compute_gradient(y, tx ,w)
+        grad = compute_gradient_lse(y, tx ,w)
         # print("grad: ", grad)
         loss = compute_loss(y, tx, w)
         w = w - gamma * grad 
@@ -60,3 +62,19 @@ def least_squares(y, tx, rmse=0):
         return mse, w
     else :
         return mse, w
+
+
+# Ridge regression
+def ridge_regression(y, tx, lambda_):
+    """implement ridge regression."""
+    XX = np.matmul(np.transpose(tx), tx)
+    XY = np.matmul(np.transpose(tx), y)
+
+    lambda_prime = lambda_ / 2 / y.shape[0]
+    diagonal_lambda = lambda_prime * np.identity(tx.shape[1])
+    
+    weight = np.linalg.solve(XX + diagonal_lambda, XY)
+    loss_mse = compute_loss(y, tx, weight)
+
+    return loss_mse, weight
+

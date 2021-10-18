@@ -64,17 +64,8 @@ def least_squares(y, tx, rmse=0):
         return mse, w
 
 
-# Ridge regression
-def ridge_regression(y, tx, lambda_):
-    """implement ridge regression."""
-    XX = np.matmul(np.transpose(tx), tx)
-    XY = np.matmul(np.transpose(tx), y)
 
-    lambda_prime = lambda_ / 2 / y.shape[0]
-    diagonal_lambda = lambda_prime * np.identity(tx.shape[1])
-    
-    weight = np.linalg.solve(XX + diagonal_lambda, XY)
-    loss_mse = compute_loss(y, tx, weight)
-
-    return loss_mse, weight
-
+def ridge_regression(y, tx, lambda_) :
+    prod = tx.T@tx
+    lambda_1 = 2*len(y)*lambda_
+    return np.linalg.inv(prod + lambda_1*np.eye(prod.shape[0], dtype=int))@tx.T@y

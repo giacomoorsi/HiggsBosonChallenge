@@ -3,17 +3,17 @@ import numpy as np
 def feature_expansion(x, degree) : 
     x_expanded = np.ones((len(x), 1))
     
-    for d in range(1, degree+1) : 
+    for d in range(0, degree+1) : 
         x_elevated = np.power(x,d)
         x_expanded = np.c_[x_expanded, x_elevated]
     
     
-    x_expanded = np.c_[x_expanded, np.sqrt(np.abs(x))]
+   # x_expanded = np.c_[x_expanded, np.sqrt(np.abs(x))]
     # cross terms
     # vectorize the calculation
     # ref: https://stackoverflow.com/questions/22041561/python-all-possible-products-between-columns
-    i, j = np.triu_indices(x.shape[1], 1)
-    x_expanded = np.c_[x_expanded, x[:, i] * x[:, j]]
+    #i, j = np.triu_indices(x.shape[1], 1)
+    #x_expanded = np.c_[x_expanded, x[:, i] * x[:, j]]
     
     
     return x_expanded

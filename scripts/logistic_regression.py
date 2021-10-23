@@ -140,10 +140,11 @@ def logistic_regression_penalized_gradient_descent(y, tx, gamma, lambda_, max_it
 
     for iter in range(max_iter):
         # get loss and update w.
+     #   print("Current iteration={i}".format(i=iter))
         loss, w = learning_by_penalized_gradient(y, tx, w, gamma, lambda_)
         # log info
-        if iter % 100 == 0:
-            print("Current iteration={i}, loss={l}".format(i=iter, l=loss))
+     #   if iter % 100 == 0:
+      #      print("Current iteration={i}, loss={l}".format(i=iter, l=loss))
         # converge criterion
         losses.append(loss)
         if len(losses) > 1 and np.abs(losses[-1] - losses[-2]) < threshold:
@@ -170,6 +171,7 @@ def cross_validate_logistic_regression(y, tx, max_iter, gamma, lambda_, k_fold) 
         
         w = logistic_regression_penalized_gradient_descent(y_train, tx_train, gamma, lambda_, max_iter)
         classified = sum(predict_labels(w, tx_test)==y_test)/len(y_test)
+        print("Fold: {k}, lambda_: {l}, acc={a}".format(k=k, l=lambda_, a=classified))
         classifications.append(classified)
 
     return np.mean(classifications)

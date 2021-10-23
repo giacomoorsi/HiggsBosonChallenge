@@ -4,8 +4,9 @@ from helper import *
 
 def compute_loss_mse(y, tx, w):
     """Calculate the loss using mean square error"""
-    e = y - np.matmul(tx,w.T) 
+    e = y - np.matmul(tx, np.array(w).T)
     return (1/(2*len(y)))*np.matmul(e.T, e)
+
 
 def compute_loss_mae(y, tx, w):
     """Calculate the loss using mean absolute error"""
@@ -66,6 +67,7 @@ def least_squares(y, tx, rmse=0):
 
 
 def ridge_regression(y, tx, lambda_) :
-    prod = tx.T@tx
-    lambda_1 = 2*len(y)*lambda_
-    return np.linalg.inv(prod + lambda_1*np.eye(prod.shape[0], dtype=int))@tx.T@y
+    n, d = tx.shape
+    w = np.zeros(d)
+    w = np.linalg.solve(tx.T @ tx + n * lambda_ * np.eye(d), tx.T @ y)
+    return w, 1 / (2 * n) * np.sum((y - tx @ w) ** 2) + lambda_ / 2 * w.T.dot(w)

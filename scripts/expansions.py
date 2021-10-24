@@ -9,7 +9,12 @@ def polynomial_expansion(x, degree):
     :return: result of the expansion
     """
     x_expanded = np.ones((len(x), 1))
-    for d in range(0, degree + 1):
-        x_elevated = np.power(x, d)
-        x_expanded = np.c_[x_expanded, x_elevated]
+    for d in range(1, degree + 1):
+        x_expanded = np.c_[x_expanded, np.power(x, d)]
+
     return x_expanded
+    """n = x.shape[1]
+    r,c = np.triu_indices(n,1)
+    out0 = x[:,r] * x[:,c]
+    out = np.concatenate(( x, out0), axis=1)
+    return np.c_[x_expanded, out]"""

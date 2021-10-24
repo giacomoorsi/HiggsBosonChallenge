@@ -62,7 +62,7 @@ def learning_by_penalized_gradient(y, tx, w, gamma, lambda_):
 
 
 def logistic_regression_penalized_gradient_descent(y, tx, gamma, lambda_, max_iter):
-    threshold = 1e-8
+    threshold = 1e+0
     losses = []
     w = np.zeros((tx.shape[1], 1))
 

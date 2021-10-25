@@ -1,0 +1,484 @@
+Least squares: (degree: 5, lambda: 0.001, accuracy: 0.8258478081058727)
+Jet2: model=least squares, degree=5, lambda=0.001, accuracy=0.8258478081058727
+
+
+degree=1,	 lambda=1.000000e-20,	 accuracy=0 - singular matrix
+degree=1,	 lambda=1.000000e-19,	 accuracy=0 - singular matrix
+degree=1,	 lambda=1.000000e-18,	 accuracy=0 - singular matrix
+degree=1,	 lambda=1.000000e-17,	 accuracy=0 - singular matrix
+degree=1,	 lambda=1.000000e-16,	 accuracy=0.7843672456575682
+degree=1,	 lambda=1.000000e-15,	 accuracy=0.7843672456575682
+degree=1,	 lambda=1.000000e-14,	 accuracy=0.7843672456575682
+degree=1,	 lambda=1.000000e-13,	 accuracy=0.7843672456575682
+degree=1,	 lambda=1.000000e-12,	 accuracy=0.7843672456575682
+degree=1,	 lambda=1.000000e-11,	 accuracy=0.7843672456575682
+degree=1,	 lambda=1.000000e-10,	 accuracy=0.7843672456575682
+degree=1,	 lambda=1.000000e-09,	 accuracy=0.7843534601599117
+degree=1,	 lambda=1.000000e-08,	 accuracy=0.7843396746622554
+degree=1,	 lambda=1.000000e-07,	 accuracy=0.7843810311552246
+degree=1,	 lambda=1.000000e-06,	 accuracy=0.7843396746622553
+degree=1,	 lambda=1.000000e-05,	 accuracy=0.7843948166528811
+degree=1,	 lambda=1.000000e-04,	 accuracy=0.7844086021505376
+degree=1,	 lambda=1.000000e-03,	 accuracy=0.7842845326716295
+degree=1,	 lambda=1.000000e-02,	 accuracy=0.7842707471739729
+degree=1,	 lambda=1.000000e-01,	 accuracy=0.7825062034739454
+degree=1,	 lambda=1.000000e+00,	 accuracy=0.7797215329473394
+degree=1,	 lambda=1.000000e+01,	 accuracy=0.768748276812793
+degree=1,	 lambda=1.000000e+02,	 accuracy=0.7567411083540115
+degree=1,	 lambda=1.000000e+03,	 accuracy=0.7408740005514198
+degree=1,	 lambda=1.000000e+04,	 accuracy=0.719933829611249
+degree=2,	 lambda=1.000000e-20,	 accuracy=0 - singular matrix
+degree=2,	 lambda=1.000000e-19,	 accuracy=0 - singular matrix
+degree=2,	 lambda=1.000000e-18,	 accuracy=0 - singular matrix
+degree=2,	 lambda=1.000000e-17,	 accuracy=0 - singular matrix
+degree=2,	 lambda=1.000000e-16,	 accuracy=0 - singular matrix
+degree=2,	 lambda=1.000000e-15,	 accuracy=0 - singular matrix
+degree=2,	 lambda=1.000000e-14,	 accuracy=0 - singular matrix
+degree=2,	 lambda=1.000000e-13,	 accuracy=0 - singular matrix
+degree=2,	 lambda=1.000000e-12,	 accuracy=0 - singular matrix
+degree=2,	 lambda=1.000000e-11,	 accuracy=0 - singular matrix
+degree=2,	 lambda=1.000000e-10,	 accuracy=0 - singular matrix
+degree=2,	 lambda=1.000000e-09,	 accuracy=0 - singular matrix
+degree=2,	 lambda=1.000000e-08,	 accuracy=0.6936311000827129
+degree=2,	 lambda=1.000000e-07,	 accuracy=0.7963881996140061
+degree=2,	 lambda=1.000000e-06,	 accuracy=0.7934932451061484
+degree=2,	 lambda=1.000000e-05,	 accuracy=0.7587951475048248
+degree=2,	 lambda=1.000000e-04,	 accuracy=0.7985387372484146
+degree=2,	 lambda=1.000000e-03,	 accuracy=0.7978632478632479
+degree=2,	 lambda=1.000000e-02,	 accuracy=0.7973531844499587
+degree=2,	 lambda=1.000000e-01,	 accuracy=0.7925696167631651
+degree=2,	 lambda=1.000000e+00,	 accuracy=0.78927488282327
+degree=2,	 lambda=1.000000e+01,	 accuracy=0.7806451612903226
+degree=2,	 lambda=1.000000e+02,	 accuracy=0.7738213399503723
+degree=2,	 lambda=1.000000e+03,	 accuracy=0.761138682106424
+degree=2,	 lambda=1.000000e+04,	 accuracy=0.7449958643507031
+degree=3,	 lambda=1.000000e-20,	 accuracy=0 - singular matrix
+degree=3,	 lambda=1.000000e-19,	 accuracy=0 - singular matrix
+degree=3,	 lambda=1.000000e-18,	 accuracy=0 - singular matrix
+degree=3,	 lambda=1.000000e-17,	 accuracy=0 - singular matrix
+degree=3,	 lambda=1.000000e-16,	 accuracy=0 - singular matrix
+degree=3,	 lambda=1.000000e-15,	 accuracy=0 - singular matrix
+degree=3,	 lambda=1.000000e-14,	 accuracy=0 - singular matrix
+degree=3,	 lambda=1.000000e-13,	 accuracy=0 - singular matrix
+degree=3,	 lambda=1.000000e-12,	 accuracy=0 - singular matrix
+degree=3,	 lambda=1.000000e-11,	 accuracy=0 - singular matrix
+degree=3,	 lambda=1.000000e-10,	 accuracy=0 - singular matrix
+degree=3,	 lambda=1.000000e-09,	 accuracy=0 - singular matrix
+degree=3,	 lambda=1.000000e-08,	 accuracy=0 - singular matrix
+degree=3,	 lambda=1.000000e-07,	 accuracy=0 - singular matrix
+degree=3,	 lambda=1.000000e-06,	 accuracy=0 - singular matrix
+degree=3,	 lambda=1.000000e-05,	 accuracy=0.7956575682382134
+degree=3,	 lambda=1.000000e-04,	 accuracy=0.7852219465122691
+degree=3,	 lambda=1.000000e-03,	 accuracy=0.803225806451613
+degree=3,	 lambda=1.000000e-02,	 accuracy=0.753460159911773
+degree=3,	 lambda=1.000000e-01,	 accuracy=0.8027019575406673
+degree=3,	 lambda=1.000000e+00,	 accuracy=0.7968155500413565
+degree=3,	 lambda=1.000000e+01,	 accuracy=0.7751723187207059
+degree=3,	 lambda=1.000000e+02,	 accuracy=0.7925144747725393
+degree=3,	 lambda=1.000000e+03,	 accuracy=0.7813482216708024
+degree=3,	 lambda=1.000000e+04,	 accuracy=0.7218224427901847
+degree=4,	 lambda=1.000000e-20,	 accuracy=0 - singular matrix
+degree=4,	 lambda=1.000000e-19,	 accuracy=0 - singular matrix
+degree=4,	 lambda=1.000000e-18,	 accuracy=0 - singular matrix
+degree=4,	 lambda=1.000000e-17,	 accuracy=0 - singular matrix
+degree=4,	 lambda=1.000000e-16,	 accuracy=0 - singular matrix
+degree=4,	 lambda=1.000000e-15,	 accuracy=0 - singular matrix
+degree=4,	 lambda=1.000000e-14,	 accuracy=0 - singular matrix
+degree=4,	 lambda=1.000000e-13,	 accuracy=0 - singular matrix
+degree=4,	 lambda=1.000000e-12,	 accuracy=0 - singular matrix
+degree=4,	 lambda=1.000000e-11,	 accuracy=0 - singular matrix
+degree=4,	 lambda=1.000000e-10,	 accuracy=0.6369313482216707
+degree=4,	 lambda=1.000000e-09,	 accuracy=0 - singular matrix
+degree=4,	 lambda=1.000000e-08,	 accuracy=0.6712848083815826
+degree=4,	 lambda=1.000000e-07,	 accuracy=0.7037082988695892
+degree=4,	 lambda=1.000000e-06,	 accuracy=0.6706231044940723
+degree=4,	 lambda=1.000000e-05,	 accuracy=0.8063688999172871
+degree=4,	 lambda=1.000000e-04,	 accuracy=0.7977116073890267
+degree=4,	 lambda=1.000000e-03,	 accuracy=0.7990074441687346
+degree=4,	 lambda=1.000000e-02,	 accuracy=0.7753653156878964
+degree=4,	 lambda=1.000000e-01,	 accuracy=0.770705817480011
+degree=4,	 lambda=1.000000e+00,	 accuracy=0.7539288668320927
+degree=4,	 lambda=1.000000e+01,	 accuracy=0.7944030879514751
+degree=4,	 lambda=1.000000e+02,	 accuracy=0.7940170940170941
+degree=4,	 lambda=1.000000e+03,	 accuracy=0.7829886958919217
+degree=4,	 lambda=1.000000e+04,	 accuracy=0.7774055693410532
+degree=5,	 lambda=1.000000e-20,	 accuracy=0 - singular matrix
+degree=5,	 lambda=1.000000e-19,	 accuracy=0 - singular matrix
+degree=5,	 lambda=1.000000e-18,	 accuracy=0 - singular matrix
+degree=5,	 lambda=1.000000e-17,	 accuracy=0 - singular matrix
+degree=5,	 lambda=1.000000e-16,	 accuracy=0 - singular matrix
+degree=5,	 lambda=1.000000e-15,	 accuracy=0 - singular matrix
+degree=5,	 lambda=1.000000e-14,	 accuracy=0 - singular matrix
+degree=5,	 lambda=1.000000e-13,	 accuracy=0 - singular matrix
+degree=5,	 lambda=1.000000e-12,	 accuracy=0 - singular matrix
+degree=5,	 lambda=1.000000e-11,	 accuracy=0 - singular matrix
+degree=5,	 lambda=1.000000e-10,	 accuracy=0 - singular matrix
+degree=5,	 lambda=1.000000e-09,	 accuracy=0 - singular matrix
+degree=5,	 lambda=1.000000e-08,	 accuracy=0 - singular matrix
+degree=5,	 lambda=1.000000e-07,	 accuracy=0 - singular matrix
+degree=5,	 lambda=1.000000e-06,	 accuracy=0 - singular matrix
+degree=5,	 lambda=1.000000e-05,	 accuracy=0.6694513371932727
+degree=5,	 lambda=1.000000e-04,	 accuracy=0.7805486628067273
+degree=5,	 lambda=1.000000e-03,	 accuracy=0.8258478081058727
+degree=5,	 lambda=1.000000e-02,	 accuracy=0.7619244554728426
+degree=5,	 lambda=1.000000e-01,	 accuracy=0.8019161841742486
+degree=5,	 lambda=1.000000e+00,	 accuracy=0.8106699751861042
+degree=5,	 lambda=1.000000e+01,	 accuracy=0.8157706093189964
+degree=5,	 lambda=1.000000e+02,	 accuracy=0.7963744141163496
+degree=5,	 lambda=1.000000e+03,	 accuracy=0.7592914254204578
+degree=5,	 lambda=1.000000e+04,	 accuracy=0.7334987593052109
+degree=6,	 lambda=1.000000e-20,	 accuracy=0 - singular matrix
+degree=6,	 lambda=1.000000e-19,	 accuracy=0 - singular matrix
+degree=6,	 lambda=1.000000e-18,	 accuracy=0 - singular matrix
+degree=6,	 lambda=1.000000e-17,	 accuracy=0 - singular matrix
+degree=6,	 lambda=1.000000e-16,	 accuracy=0.716528811690102
+degree=6,	 lambda=1.000000e-15,	 accuracy=0.7190929142542045
+degree=6,	 lambda=1.000000e-14,	 accuracy=0.7110421836228288
+degree=6,	 lambda=1.000000e-13,	 accuracy=0.703170664460987
+degree=6,	 lambda=1.000000e-12,	 accuracy=0.6613592500689275
+degree=6,	 lambda=1.000000e-11,	 accuracy=0.7278604907637165
+degree=6,	 lambda=1.000000e-10,	 accuracy=0.7022608216156604
+degree=6,	 lambda=1.000000e-09,	 accuracy=0.6038461538461538
+degree=6,	 lambda=1.000000e-08,	 accuracy=0.6360352908740005
+degree=6,	 lambda=1.000000e-07,	 accuracy=0.7003997794320376
+degree=6,	 lambda=1.000000e-06,	 accuracy=0.6893024538185829
+degree=6,	 lambda=1.000000e-05,	 accuracy=0.6726771436448856
+degree=6,	 lambda=1.000000e-04,	 accuracy=0.8200854700854702
+degree=6,	 lambda=1.000000e-03,	 accuracy=0.8170940170940172
+degree=6,	 lambda=1.000000e-02,	 accuracy=0.7371519161841742
+degree=6,	 lambda=1.000000e-01,	 accuracy=0.8046043562172596
+degree=6,	 lambda=1.000000e+00,	 accuracy=0.7607113316790737
+degree=6,	 lambda=1.000000e+01,	 accuracy=0.8064240419079128
+degree=6,	 lambda=1.000000e+02,	 accuracy=0.7864488558036944
+degree=6,	 lambda=1.000000e+03,	 accuracy=0.6665977391783843
+degree=6,	 lambda=1.000000e+04,	 accuracy=0.7184863523573202
+degree=7,	 lambda=1.000000e-20,	 accuracy=0 - singular matrix
+degree=7,	 lambda=1.000000e-19,	 accuracy=0 - singular matrix
+degree=7,	 lambda=1.000000e-18,	 accuracy=0 - singular matrix
+degree=7,	 lambda=1.000000e-17,	 accuracy=0 - singular matrix
+degree=7,	 lambda=1.000000e-16,	 accuracy=0 - singular matrix
+degree=7,	 lambda=1.000000e-15,	 accuracy=0 - singular matrix
+degree=7,	 lambda=1.000000e-14,	 accuracy=0 - singular matrix
+degree=7,	 lambda=1.000000e-13,	 accuracy=0 - singular matrix
+degree=7,	 lambda=1.000000e-12,	 accuracy=0 - singular matrix
+degree=7,	 lambda=1.000000e-11,	 accuracy=0 - singular matrix
+degree=7,	 lambda=1.000000e-10,	 accuracy=0 - singular matrix
+degree=7,	 lambda=1.000000e-09,	 accuracy=0 - singular matrix
+degree=7,	 lambda=1.000000e-08,	 accuracy=0 - singular matrix
+degree=7,	 lambda=1.000000e-07,	 accuracy=0.5896057347670252
+degree=7,	 lambda=1.000000e-06,	 accuracy=0.5970912599944859
+degree=7,	 lambda=1.000000e-05,	 accuracy=0.7039702233250621
+degree=7,	 lambda=1.000000e-04,	 accuracy=0.775448028673835
+degree=7,	 lambda=1.000000e-03,	 accuracy=0.8234767025089604
+degree=7,	 lambda=1.000000e-02,	 accuracy=0.8243589743589743
+degree=7,	 lambda=1.000000e-01,	 accuracy=0.8246208988144472
+degree=7,	 lambda=1.000000e+00,	 accuracy=0.7362007168458782
+degree=7,	 lambda=1.000000e+01,	 accuracy=0.7466776950647919
+degree=7,	 lambda=1.000000e+02,	 accuracy=0.7485249517507582
+degree=7,	 lambda=1.000000e+03,	 accuracy=0.7482492417976288
+degree=7,	 lambda=1.000000e+04,	 accuracy=0.6457678522194652
+degree=8,	 lambda=1.000000e-20,	 accuracy=0 - singular matrix
+degree=8,	 lambda=1.000000e-19,	 accuracy=0 - singular matrix
+degree=8,	 lambda=1.000000e-18,	 accuracy=0 - singular matrix
+degree=8,	 lambda=1.000000e-17,	 accuracy=0 - singular matrix
+degree=8,	 lambda=1.000000e-16,	 accuracy=0 - singular matrix
+degree=8,	 lambda=1.000000e-15,	 accuracy=0 - singular matrix
+degree=8,	 lambda=1.000000e-14,	 accuracy=0 - singular matrix
+degree=8,	 lambda=1.000000e-13,	 accuracy=0 - singular matrix
+degree=8,	 lambda=1.000000e-12,	 accuracy=0 - singular matrix
+degree=8,	 lambda=1.000000e-11,	 accuracy=0 - singular matrix
+degree=8,	 lambda=1.000000e-10,	 accuracy=0 - singular matrix
+degree=8,	 lambda=1.000000e-09,	 accuracy=0 - singular matrix
+degree=8,	 lambda=1.000000e-08,	 accuracy=0.6395643782740558
+degree=8,	 lambda=1.000000e-07,	 accuracy=0 - singular matrix
+degree=8,	 lambda=1.000000e-06,	 accuracy=0 - singular matrix
+degree=8,	 lambda=1.000000e-05,	 accuracy=0 - singular matrix
+degree=8,	 lambda=1.000000e-04,	 accuracy=0.7242349048800663
+degree=8,	 lambda=1.000000e-03,	 accuracy=0.7482905982905983
+degree=8,	 lambda=1.000000e-02,	 accuracy=0.711759029500965
+degree=8,	 lambda=1.000000e-01,	 accuracy=0.6786876206231044
+degree=8,	 lambda=1.000000e+00,	 accuracy=0.6795561069754619
+degree=8,	 lambda=1.000000e+01,	 accuracy=0.6730493520816101
+degree=8,	 lambda=1.000000e+02,	 accuracy=0.5818169285911221
+degree=8,	 lambda=1.000000e+03,	 accuracy=0.6176730079955887
+degree=8,	 lambda=1.000000e+04,	 accuracy=0.6870967741935484
+degree=9,	 lambda=1.000000e-20,	 accuracy=0 - singular matrix
+degree=9,	 lambda=1.000000e-19,	 accuracy=0 - singular matrix
+degree=9,	 lambda=1.000000e-18,	 accuracy=0 - singular matrix
+degree=9,	 lambda=1.000000e-17,	 accuracy=0 - singular matrix
+degree=9,	 lambda=1.000000e-16,	 accuracy=0 - singular matrix
+degree=9,	 lambda=1.000000e-15,	 accuracy=0 - singular matrix
+degree=9,	 lambda=1.000000e-14,	 accuracy=0 - singular matrix
+degree=9,	 lambda=1.000000e-13,	 accuracy=0 - singular matrix
+degree=9,	 lambda=1.000000e-12,	 accuracy=0 - singular matrix
+degree=9,	 lambda=1.000000e-11,	 accuracy=0 - singular matrix
+degree=9,	 lambda=1.000000e-10,	 accuracy=0 - singular matrix
+degree=9,	 lambda=1.000000e-09,	 accuracy=0 - singular matrix
+degree=9,	 lambda=1.000000e-08,	 accuracy=0.6205817480011028
+degree=9,	 lambda=1.000000e-07,	 accuracy=0.6909153570443893
+degree=9,	 lambda=1.000000e-06,	 accuracy=0.6900330851943755
+degree=9,	 lambda=1.000000e-05,	 accuracy=0.6522194651226909
+degree=9,	 lambda=1.000000e-04,	 accuracy=0.7752826027019575
+degree=9,	 lambda=1.000000e-03,	 accuracy=0.661759029500965
+degree=9,	 lambda=1.000000e-02,	 accuracy=0.6631789357595809
+degree=9,	 lambda=1.000000e-01,	 accuracy=0.6417562724014336
+degree=9,	 lambda=1.000000e+00,	 accuracy=0.6666804521643233
+degree=9,	 lambda=1.000000e+01,	 accuracy=0.6420733388475325
+degree=9,	 lambda=1.000000e+02,	 accuracy=0.5593189964157707
+degree=9,	 lambda=1.000000e+03,	 accuracy=0.5913840639647091
+degree=9,	 lambda=1.000000e+04,	 accuracy=0.5662668872346291
+degree=10,	 lambda=1.000000e-20,	 accuracy=0 - singular matrix
+degree=10,	 lambda=1.000000e-19,	 accuracy=0 - singular matrix
+degree=10,	 lambda=1.000000e-18,	 accuracy=0 - singular matrix
+degree=10,	 lambda=1.000000e-17,	 accuracy=0 - singular matrix
+degree=10,	 lambda=1.000000e-16,	 accuracy=0 - singular matrix
+degree=10,	 lambda=1.000000e-15,	 accuracy=0 - singular matrix
+degree=10,	 lambda=1.000000e-14,	 accuracy=0 - singular matrix
+degree=10,	 lambda=1.000000e-13,	 accuracy=0 - singular matrix
+degree=10,	 lambda=1.000000e-12,	 accuracy=0 - singular matrix
+degree=10,	 lambda=1.000000e-11,	 accuracy=0 - singular matrix
+degree=10,	 lambda=1.000000e-10,	 accuracy=0 - singular matrix
+degree=10,	 lambda=1.000000e-09,	 accuracy=0 - singular matrix
+degree=10,	 lambda=1.000000e-08,	 accuracy=0 - singular matrix
+degree=10,	 lambda=1.000000e-07,	 accuracy=0.5851668045216433
+degree=10,	 lambda=1.000000e-06,	 accuracy=0.684091535704439
+degree=10,	 lambda=1.000000e-05,	 accuracy=0.6563275434243176
+degree=10,	 lambda=1.000000e-04,	 accuracy=0.6134546457127102
+degree=10,	 lambda=1.000000e-03,	 accuracy=0.5883236834849738
+degree=10,	 lambda=1.000000e-02,	 accuracy=0.6411910669975186
+degree=10,	 lambda=1.000000e-01,	 accuracy=0.6739591949269368
+degree=10,	 lambda=1.000000e+00,	 accuracy=0.6008547008547008
+degree=10,	 lambda=1.000000e+01,	 accuracy=0.5694513371932727
+degree=10,	 lambda=1.000000e+02,	 accuracy=0.5787151916184173
+degree=10,	 lambda=1.000000e+03,	 accuracy=0.5423766197959746
+degree=10,	 lambda=1.000000e+04,	 accuracy=0.5171905155776123
+degree=11,	 lambda=1.000000e-20,	 accuracy=0 - singular matrix
+degree=11,	 lambda=1.000000e-19,	 accuracy=0 - singular matrix
+degree=11,	 lambda=1.000000e-18,	 accuracy=0 - singular matrix
+degree=11,	 lambda=1.000000e-17,	 accuracy=0 - singular matrix
+degree=11,	 lambda=1.000000e-16,	 accuracy=0 - singular matrix
+degree=11,	 lambda=1.000000e-15,	 accuracy=0 - singular matrix
+degree=11,	 lambda=1.000000e-14,	 accuracy=0 - singular matrix
+degree=11,	 lambda=1.000000e-13,	 accuracy=0 - singular matrix
+degree=11,	 lambda=1.000000e-12,	 accuracy=0 - singular matrix
+degree=11,	 lambda=1.000000e-11,	 accuracy=0 - singular matrix
+degree=11,	 lambda=1.000000e-10,	 accuracy=0 - singular matrix
+degree=11,	 lambda=1.000000e-09,	 accuracy=0 - singular matrix
+degree=11,	 lambda=1.000000e-08,	 accuracy=0 - singular matrix
+degree=11,	 lambda=1.000000e-07,	 accuracy=0 - singular matrix
+degree=11,	 lambda=1.000000e-06,	 accuracy=0.63264405845051
+degree=11,	 lambda=1.000000e-05,	 accuracy=0.6067824648469811
+degree=11,	 lambda=1.000000e-04,	 accuracy=0.6240143369175628
+degree=11,	 lambda=1.000000e-03,	 accuracy=0.6472153294733939
+degree=11,	 lambda=1.000000e-02,	 accuracy=0.6581610146126275
+degree=11,	 lambda=1.000000e-01,	 accuracy=0.6002067824648469
+degree=11,	 lambda=1.000000e+00,	 accuracy=0.6243314033636614
+degree=11,	 lambda=1.000000e+01,	 accuracy=0.5524676040805073
+degree=11,	 lambda=1.000000e+02,	 accuracy=0.6353046594982079
+degree=11,	 lambda=1.000000e+03,	 accuracy=0.6037082988695892
+degree=11,	 lambda=1.000000e+04,	 accuracy=0.5424455472842571
+degree=12,	 lambda=1.000000e-20,	 accuracy=0 - singular matrix
+degree=12,	 lambda=1.000000e-19,	 accuracy=0 - singular matrix
+degree=12,	 lambda=1.000000e-18,	 accuracy=0 - singular matrix
+degree=12,	 lambda=1.000000e-17,	 accuracy=0 - singular matrix
+degree=12,	 lambda=1.000000e-16,	 accuracy=0 - singular matrix
+degree=12,	 lambda=1.000000e-15,	 accuracy=0 - singular matrix
+degree=12,	 lambda=1.000000e-14,	 accuracy=0 - singular matrix
+degree=12,	 lambda=1.000000e-13,	 accuracy=0 - singular matrix
+degree=12,	 lambda=1.000000e-12,	 accuracy=0 - singular matrix
+degree=12,	 lambda=1.000000e-11,	 accuracy=0 - singular matrix
+degree=12,	 lambda=1.000000e-10,	 accuracy=0 - singular matrix
+degree=12,	 lambda=1.000000e-09,	 accuracy=0 - singular matrix
+degree=12,	 lambda=1.000000e-08,	 accuracy=0 - singular matrix
+degree=12,	 lambda=1.000000e-07,	 accuracy=0 - singular matrix
+degree=12,	 lambda=1.000000e-06,	 accuracy=0.5622415219189413
+degree=12,	 lambda=1.000000e-05,	 accuracy=0.5906258615936035
+degree=12,	 lambda=1.000000e-04,	 accuracy=0.5286876206231044
+degree=12,	 lambda=1.000000e-03,	 accuracy=0.6732974910394266
+degree=12,	 lambda=1.000000e-02,	 accuracy=0.5755169561621175
+degree=12,	 lambda=1.000000e-01,	 accuracy=0.5934381031155225
+degree=12,	 lambda=1.000000e+00,	 accuracy=0.6188861317893576
+degree=12,	 lambda=1.000000e+01,	 accuracy=0.5874551971326165
+degree=12,	 lambda=1.000000e+02,	 accuracy=0.6122277364212848
+degree=12,	 lambda=1.000000e+03,	 accuracy=0.6272539288668322
+degree=12,	 lambda=1.000000e+04,	 accuracy=0.5317342156051834
+degree=13,	 lambda=1.000000e-20,	 accuracy=0 - singular matrix
+degree=13,	 lambda=1.000000e-19,	 accuracy=0 - singular matrix
+degree=13,	 lambda=1.000000e-18,	 accuracy=0 - singular matrix
+degree=13,	 lambda=1.000000e-17,	 accuracy=0 - singular matrix
+degree=13,	 lambda=1.000000e-16,	 accuracy=0 - singular matrix
+degree=13,	 lambda=1.000000e-15,	 accuracy=0 - singular matrix
+degree=13,	 lambda=1.000000e-14,	 accuracy=0 - singular matrix
+degree=13,	 lambda=1.000000e-13,	 accuracy=0 - singular matrix
+degree=13,	 lambda=1.000000e-12,	 accuracy=0 - singular matrix
+degree=13,	 lambda=1.000000e-11,	 accuracy=0 - singular matrix
+degree=13,	 lambda=1.000000e-10,	 accuracy=0 - singular matrix
+degree=13,	 lambda=1.000000e-09,	 accuracy=0 - singular matrix
+degree=13,	 lambda=1.000000e-08,	 accuracy=0 - singular matrix
+degree=13,	 lambda=1.000000e-07,	 accuracy=0 - singular matrix
+degree=13,	 lambda=1.000000e-06,	 accuracy=0 - singular matrix
+degree=13,	 lambda=1.000000e-05,	 accuracy=0.6092776399228013
+degree=13,	 lambda=1.000000e-04,	 accuracy=0.5904190791287565
+degree=13,	 lambda=1.000000e-03,	 accuracy=0.6086021505376344
+degree=13,	 lambda=1.000000e-02,	 accuracy=0.6665977391783844
+degree=13,	 lambda=1.000000e-01,	 accuracy=0.6398538737248415
+degree=13,	 lambda=1.000000e+00,	 accuracy=0.6354700854700854
+degree=13,	 lambda=1.000000e+01,	 accuracy=0.6099393438103116
+degree=13,	 lambda=1.000000e+02,	 accuracy=0.5498897160187484
+degree=13,	 lambda=1.000000e+03,	 accuracy=0.5802178108629722
+degree=13,	 lambda=1.000000e+04,	 accuracy=0.5911634960022056
+degree=14,	 lambda=1.000000e-20,	 accuracy=0 - singular matrix
+degree=14,	 lambda=1.000000e-19,	 accuracy=0 - singular matrix
+degree=14,	 lambda=1.000000e-18,	 accuracy=0 - singular matrix
+degree=14,	 lambda=1.000000e-17,	 accuracy=0 - singular matrix
+degree=14,	 lambda=1.000000e-16,	 accuracy=0 - singular matrix
+degree=14,	 lambda=1.000000e-15,	 accuracy=0 - singular matrix
+degree=14,	 lambda=1.000000e-14,	 accuracy=0 - singular matrix
+degree=14,	 lambda=1.000000e-13,	 accuracy=0 - singular matrix
+degree=14,	 lambda=1.000000e-12,	 accuracy=0 - singular matrix
+degree=14,	 lambda=1.000000e-11,	 accuracy=0 - singular matrix
+degree=14,	 lambda=1.000000e-10,	 accuracy=0 - singular matrix
+degree=14,	 lambda=1.000000e-09,	 accuracy=0 - singular matrix
+degree=14,	 lambda=1.000000e-08,	 accuracy=0 - singular matrix
+degree=14,	 lambda=1.000000e-07,	 accuracy=0.5920457678522195
+degree=14,	 lambda=1.000000e-06,	 accuracy=0.5976978218913702
+degree=14,	 lambda=1.000000e-05,	 accuracy=0.5538599393438103
+degree=14,	 lambda=1.000000e-04,	 accuracy=0.6468569065343259
+degree=14,	 lambda=1.000000e-03,	 accuracy=0.6448028673835126
+degree=14,	 lambda=1.000000e-02,	 accuracy=0.6064378274055693
+degree=14,	 lambda=1.000000e-01,	 accuracy=0.5863523573200993
+degree=14,	 lambda=1.000000e+00,	 accuracy=0.5999172870140612
+degree=14,	 lambda=1.000000e+01,	 accuracy=0.5625448028673835
+degree=14,	 lambda=1.000000e+02,	 accuracy=0.5509787703336091
+degree=14,	 lambda=1.000000e+03,	 accuracy=0.5518886131789358
+degree=14,	 lambda=1.000000e+04,	 accuracy=0.5379514750482493
+degree=15,	 lambda=1.000000e-20,	 accuracy=0 - singular matrix
+degree=15,	 lambda=1.000000e-19,	 accuracy=0 - singular matrix
+degree=15,	 lambda=1.000000e-18,	 accuracy=0 - singular matrix
+degree=15,	 lambda=1.000000e-17,	 accuracy=0 - singular matrix
+degree=15,	 lambda=1.000000e-16,	 accuracy=0 - singular matrix
+degree=15,	 lambda=1.000000e-15,	 accuracy=0 - singular matrix
+degree=15,	 lambda=1.000000e-14,	 accuracy=0 - singular matrix
+degree=15,	 lambda=1.000000e-13,	 accuracy=0 - singular matrix
+degree=15,	 lambda=1.000000e-12,	 accuracy=0 - singular matrix
+degree=15,	 lambda=1.000000e-11,	 accuracy=0 - singular matrix
+degree=15,	 lambda=1.000000e-10,	 accuracy=0 - singular matrix
+degree=15,	 lambda=1.000000e-09,	 accuracy=0 - singular matrix
+degree=15,	 lambda=1.000000e-08,	 accuracy=0 - singular matrix
+degree=15,	 lambda=1.000000e-07,	 accuracy=0.5379514750482493
+degree=15,	 lambda=1.000000e-06,	 accuracy=0 - singular matrix
+degree=15,	 lambda=1.000000e-05,	 accuracy=0.5232837055417701
+degree=15,	 lambda=1.000000e-04,	 accuracy=0.5402398676592226
+degree=15,	 lambda=1.000000e-03,	 accuracy=0.5509374138406395
+degree=15,	 lambda=1.000000e-02,	 accuracy=0.5831265508684863
+degree=15,	 lambda=1.000000e-01,	 accuracy=0.5597049903501515
+degree=15,	 lambda=1.000000e+00,	 accuracy=0.5854562999724291
+degree=15,	 lambda=1.000000e+01,	 accuracy=0.5498070030328096
+degree=15,	 lambda=1.000000e+02,	 accuracy=0.5646401985111662
+degree=15,	 lambda=1.000000e+03,	 accuracy=0.5305624483043838
+degree=15,	 lambda=1.000000e+04,	 accuracy=0.5327129859387923
+degree=16,	 lambda=1.000000e-20,	 accuracy=0 - singular matrix
+degree=16,	 lambda=1.000000e-19,	 accuracy=0 - singular matrix
+degree=16,	 lambda=1.000000e-18,	 accuracy=0 - singular matrix
+degree=16,	 lambda=1.000000e-17,	 accuracy=0 - singular matrix
+degree=16,	 lambda=1.000000e-16,	 accuracy=0 - singular matrix
+degree=16,	 lambda=1.000000e-15,	 accuracy=0 - singular matrix
+degree=16,	 lambda=1.000000e-14,	 accuracy=0 - singular matrix
+degree=16,	 lambda=1.000000e-13,	 accuracy=0 - singular matrix
+degree=16,	 lambda=1.000000e-12,	 accuracy=0 - singular matrix
+degree=16,	 lambda=1.000000e-11,	 accuracy=0 - singular matrix
+degree=16,	 lambda=1.000000e-10,	 accuracy=0 - singular matrix
+degree=16,	 lambda=1.000000e-09,	 accuracy=0 - singular matrix
+degree=16,	 lambda=1.000000e-08,	 accuracy=0 - singular matrix
+degree=16,	 lambda=1.000000e-07,	 accuracy=0 - singular matrix
+degree=16,	 lambda=1.000000e-06,	 accuracy=0 - singular matrix
+degree=16,	 lambda=1.000000e-05,	 accuracy=0.5923352633030052
+degree=16,	 lambda=1.000000e-04,	 accuracy=0.586848635235732
+degree=16,	 lambda=1.000000e-03,	 accuracy=0.6174937965260545
+degree=16,	 lambda=1.000000e-02,	 accuracy=0.6233250620347394
+degree=16,	 lambda=1.000000e-01,	 accuracy=0.5766473669699477
+degree=16,	 lambda=1.000000e+00,	 accuracy=0.6170940170940171
+degree=16,	 lambda=1.000000e+01,	 accuracy=0.5834987593052109
+degree=16,	 lambda=1.000000e+02,	 accuracy=0.5982630272952854
+degree=16,	 lambda=1.000000e+03,	 accuracy=0.5261373035566584
+degree=16,	 lambda=1.000000e+04,	 accuracy=0.5794182519988971
+degree=17,	 lambda=1.000000e-20,	 accuracy=0 - singular matrix
+degree=17,	 lambda=1.000000e-19,	 accuracy=0 - singular matrix
+degree=17,	 lambda=1.000000e-18,	 accuracy=0 - singular matrix
+degree=17,	 lambda=1.000000e-17,	 accuracy=0 - singular matrix
+degree=17,	 lambda=1.000000e-16,	 accuracy=0 - singular matrix
+degree=17,	 lambda=1.000000e-15,	 accuracy=0 - singular matrix
+degree=17,	 lambda=1.000000e-14,	 accuracy=0 - singular matrix
+degree=17,	 lambda=1.000000e-13,	 accuracy=0 - singular matrix
+degree=17,	 lambda=1.000000e-12,	 accuracy=0 - singular matrix
+degree=17,	 lambda=1.000000e-11,	 accuracy=0 - singular matrix
+degree=17,	 lambda=1.000000e-10,	 accuracy=0 - singular matrix
+degree=17,	 lambda=1.000000e-09,	 accuracy=0 - singular matrix
+degree=17,	 lambda=1.000000e-08,	 accuracy=0 - singular matrix
+degree=17,	 lambda=1.000000e-07,	 accuracy=0 - singular matrix
+degree=17,	 lambda=1.000000e-06,	 accuracy=0.5632202922525502
+degree=17,	 lambda=1.000000e-05,	 accuracy=0.5707885304659499
+degree=17,	 lambda=1.000000e-04,	 accuracy=0.6086021505376344
+degree=17,	 lambda=1.000000e-03,	 accuracy=0.5744554728425696
+degree=17,	 lambda=1.000000e-02,	 accuracy=0.5753377446925834
+degree=17,	 lambda=1.000000e-01,	 accuracy=0.6425558312655086
+degree=17,	 lambda=1.000000e+00,	 accuracy=0.5877446925834023
+degree=17,	 lambda=1.000000e+01,	 accuracy=0.560545905707196
+degree=17,	 lambda=1.000000e+02,	 accuracy=0.546236559139785
+degree=17,	 lambda=1.000000e+03,	 accuracy=0.5483319547835677
+degree=17,	 lambda=1.000000e+04,	 accuracy=0.551157981803143
+degree=18,	 lambda=1.000000e-20,	 accuracy=0 - singular matrix
+degree=18,	 lambda=1.000000e-19,	 accuracy=0 - singular matrix
+degree=18,	 lambda=1.000000e-18,	 accuracy=0 - singular matrix
+degree=18,	 lambda=1.000000e-17,	 accuracy=0 - singular matrix
+degree=18,	 lambda=1.000000e-16,	 accuracy=0.1314722911497105
+degree=18,	 lambda=1.000000e-15,	 accuracy=0.12631651502619246
+degree=18,	 lambda=1.000000e-14,	 accuracy=0.11756272401433691
+degree=18,	 lambda=1.000000e-13,	 accuracy=0.11829335539012957
+degree=18,	 lambda=1.000000e-12,	 accuracy=0.14375516956162118
+degree=18,	 lambda=1.000000e-11,	 accuracy=0.12693686242073338
+degree=18,	 lambda=1.000000e-10,	 accuracy=0.1208298869589192
+degree=18,	 lambda=1.000000e-09,	 accuracy=0.1431486076647367
+degree=18,	 lambda=1.000000e-08,	 accuracy=0.13101736972704714
+degree=18,	 lambda=1.000000e-07,	 accuracy=0.1072925282602702
+degree=18,	 lambda=1.000000e-06,	 accuracy=0.14935208161014613
+degree=18,	 lambda=1.000000e-05,	 accuracy=0.1339812517231872
+degree=18,	 lambda=1.000000e-04,	 accuracy=0.1091259994485801
+degree=18,	 lambda=1.000000e-03,	 accuracy=0.14491315136476426
+degree=18,	 lambda=1.000000e-02,	 accuracy=0.10598290598290598
+degree=18,	 lambda=1.000000e-01,	 accuracy=0.13870967741935486
+degree=18,	 lambda=1.000000e+00,	 accuracy=0.12463468431210367
+degree=18,	 lambda=1.000000e+01,	 accuracy=0.09988971601874827
+degree=18,	 lambda=1.000000e+02,	 accuracy=0.12059553349875932
+degree=18,	 lambda=1.000000e+03,	 accuracy=0.10024813895781637
+degree=18,	 lambda=1.000000e+04,	 accuracy=0.11543975737524123
+degree=19,	 lambda=1.000000e-20,	 accuracy=0 - singular matrix
+degree=19,	 lambda=1.000000e-19,	 accuracy=0 - singular matrix
+degree=19,	 lambda=1.000000e-18,	 accuracy=0 - singular matrix
+degree=19,	 lambda=1.000000e-17,	 accuracy=0 - singular matrix
+degree=19,	 lambda=1.000000e-16,	 accuracy=0.0
+degree=19,	 lambda=1.000000e-15,	 accuracy=0.0
+degree=19,	 lambda=1.000000e-14,	 accuracy=0.0
+degree=19,	 lambda=1.000000e-13,	 accuracy=0.0
+degree=19,	 lambda=1.000000e-12,	 accuracy=0.0
+degree=19,	 lambda=1.000000e-11,	 accuracy=0.0
+degree=19,	 lambda=1.000000e-10,	 accuracy=0.0
+degree=19,	 lambda=1.000000e-09,	 accuracy=0.0
+degree=19,	 lambda=1.000000e-08,	 accuracy=0.0
+degree=19,	 lambda=1.000000e-07,	 accuracy=0.0
+degree=19,	 lambda=1.000000e-06,	 accuracy=0.0
+degree=19,	 lambda=1.000000e-05,	 accuracy=0.0
+degree=19,	 lambda=1.000000e-04,	 accuracy=0.0
+degree=19,	 lambda=1.000000e-03,	 accuracy=0.0
+degree=19,	 lambda=1.000000e-02,	 accuracy=0.0
+degree=19,	 lambda=1.000000e-01,	 accuracy=0.0
+degree=19,	 lambda=1.000000e+00,	 accuracy=0.0
+degree=19,	 lambda=1.000000e+01,	 accuracy=0.0
+degree=19,	 lambda=1.000000e+02,	 accuracy=0.0
+degree=19,	 lambda=1.000000e+03,	 accuracy=0.0
+degree=19,	 lambda=1.000000e+04,	 accuracy=0.0
+Least squares: (degree: 5, lambda: 0.001, accuracy: 0.8258478081058727)
+Jet2: model=least squares, degree=5, lambda=0.001, accuracy=0.8258478081058727
+Jet0: model=least squares, degree=3, lambda=0.1, accuracy=0.8355219697727956
+Jet1: model=least squares, degree=7, lambda=1e-05, accuracy=0.8043203507866906
+Jet2: model=least squares, degree=5, lambda=0.001, accuracy=0.8258478081058727

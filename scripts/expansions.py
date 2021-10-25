@@ -18,5 +18,5 @@ def polynomial_expansion(x, degree, mixed_columns=False):
         out0 = x[:,r] * x[:,c]
         out = np.concatenate(( x, out0), axis=1)
         x_expanded = np.c_[x_expanded, out]
-        
+
     return x_expanded

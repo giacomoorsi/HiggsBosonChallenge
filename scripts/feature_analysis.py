@@ -99,9 +99,10 @@ def addFeat(filt_x, jet_num):
     mass_trans_met = np.c_[ filt_x[:,index_entry] * filt_x[:,1], filt_x[:,index_entry] * np.power(filt_x[:,1], 2) ]
 
     # momentum
-    momentum_trans_met = np.c_[ filt_x[:,index_entry] * filt_x[:,momentum_index], filt_x[:,index_entry] * np.power(filt_x[:,momentum_index], 2) ]
+    momentum_trans_met3 = np.c_[ filt_x[:,index_entry] * filt_x[:,3], filt_x[:,index_entry] * np.power(filt_x[:,3], 2) ]
+    momentum_trans_met8 = np.c_[ filt_x[:,index_entry] * filt_x[:,momentum_index], filt_x[:,index_entry] * np.power(filt_x[:,momentum_index], 2) ]
 
-    tx_total = np.c_[ tx_total ,mass_trans_met, momentum_trans_met ]
+    tx_total = np.c_[ tx_total ,mass_trans_met, momentum_trans_met3, momentum_trans_met8 ]
 
 
     # Consider entry 4,5,6,12. As they are a pair

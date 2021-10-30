@@ -162,3 +162,91 @@ def fix_missing_values(x):
 def fix_nan_values(x):
     x = np.nan_to_num(x)
     return x
+
+
+
+## Usage
+# new_tx = fill_mass_MMC(test_dataset, train_dataset, train_answer [,alpha])
+#
+# This should be done before any preprocessing, the input dataset must be the original one
+###############
+
+
+def get_certain_dims(jet_num):
+    """Return the vector of indices which contains defined values"""
+    assert jet_num >= 0 and jet_num <= 3
+
+    if jet_num == 0:
+        return [0,1,2,3,7,8,9,10,11,13,14,15,16,17,18,19,20,21,29]
+    elif jet_num == 1:
+        return [0,1,2,3,7,8,9,10,11,13,14,15,16,17,18,19,20,21,23,24,25,29]
+    else:
+        return [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,23,24,25,26,27,28,29]
+
+def getTrainMissing(train_data, train_answer):
+    xps = []
+    xms = []
+    vps = []
+    vms = []
+
+    for jet_num in range(3):
+        dim = get_certain_dims(jet_num)
+        dim = dim[1:]   # erase 0 because we want to estimate it
+
+        positive_answer = train_answer == 1
+        negative_answer = train_answer == -1
+
+        row_index_with_value = train_data[:, 0] != -999
+
+        positive_and_with_value = np.where(np.logical_and(row_index_with_value, positive_answer))
+
+        x_plus  = np.mean(train_data[positive_and_with_value,0])
+
+        negative_and_with_value = np.where(np.logical_and(row_index_with_value, negative_answer))
+        x_minus = np.mean(train_data[negative_and_with_value,0])
+
+        index_positive = np.where(positive_answer)[0]
+        index_negative = np.where(negative_answer)[0]
+        v_plus  = np.mean(train_data[index_positive[:,None],dim], axis=0)
+        v_minus = np.mean(train_data[index_negative[:,None],dim], axis=0)
+
+        xps.append(x_plus)
+        xms.append(x_minus)
+        vps.append(v_plus)
+        vms.append(v_minus)
+
+    return tuple(xps), tuple(xms), tuple(vps), tuple(vms)
+
+
+def fill_undefined(data_feature, interpolate_info, alpha=0.8):
+
+    jet_num = data_feature[22]
+    x_plus, x_minus, v_plus, v_minus = interpolate_info
+
+    jet_num = 2 if jet_num > 2 else int(jet_num)
+
+    # First determine the distance between the vector and the v_plus/v_minus
+    dims = get_certain_dims(jet_num)
+    dims = dims[1:]
+
+    remainVector = data_feature[dims]
+
+    distance = (np.linalg.norm(remainVector - v_plus[jet_num]), np.linalg.norm(remainVector - v_minus[jet_num]))
+
+    # When positive signal is closer
+    if distance[0] > distance[1]:
+        return alpha*x_plus[jet_num] + (1-alpha)*x_minus[jet_num]
+    else:
+        return (1-alpha)*x_plus[jet_num] + alpha*x_minus[jet_num]
+
+
+def fill_mass_MMC(test_data, train_data, train_answer, alpha=0.8):
+    missing_rows = np.where(train_data[:,0] == -999)[0]
+
+    # interpolateInfo = (x_plus, x_minus, v_plus, v_minus)
+    interpolateInfo = getTrainMissing(train_data, train_answer)
+
+    for row in missing_rows:
+        test_data[row,0] = fill_undefined(test_data[row,:], interpolateInfo, alpha)
+
+    return test_data

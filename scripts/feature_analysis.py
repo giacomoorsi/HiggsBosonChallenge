@@ -166,9 +166,25 @@ def fix_nan_values(x):
 
 
 
-## Usage
+## Usage ##
 # new_tx = fill_mass_MMC(test_dataset, train_dataset, train_answer [,alpha])
 #
+# 'new_tx' will be the same content as 'test_dataset' but filling the missing values in the first column
+#     with the values inferred from the 'train_dataset'
+#
+# For training, one can write:
+# '''
+# new_tx = fill_mass_MMC(tX_train, tX_train, train_answer)
+# '''
+# to fill the missing values.
+#
+# For testing, one can write
+# '''
+# new_tx = fill_mass_MMC(tX_test, tX_train, train_answer)
+# '''
+# to fille the missing values for the testing dataset.
+#
+# **NOTE**
 # This should be done before any preprocessing, the input dataset must be the original one
 ###############
 

@@ -9,7 +9,7 @@ def feature_expand(x_jet, jet_num):
 
 def feature_to_energy(x_jet, jet_num):
     """Assign function to every label to match the units of energy^2"""
-    index_label = get_featureMeaning_index(jet_num)
+    index_label = get_feature_meaning_index(jet_num)
 
     mass_term = x_jet[:, index_label['mass']]
     tX_mass = np.c_[mass_term, np.power(mass_term, 2)]
@@ -25,7 +25,7 @@ def feature_to_energy(x_jet, jet_num):
     return tX_total
 
 
-def get_featureMeaning_index(jet_num):
+def get_feature_meaning_index(jet_num):
     index_label = {'mass': [], 'energy': [], 'momentum': [],
                    'eta': [], 'centrality': [], 'angle': [], 'ratio': []}
     if jet_num == 0:

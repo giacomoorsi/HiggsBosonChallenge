@@ -1,5 +1,40 @@
+import numpy as np
+import data_cleaning as dc
+import feature_engineering as fe
 
 
+def prepare_train_data(y, x):
+    y_jets, x_jets = dc.split_train_data(y, x)
 
-def prepare_train_data(tX, y):
-    return x_jets, y_jets, replacing_values, means, stds
+    # Arrays containing statistical information about the
+    # training dataset. Saved to use on the testing set
+    medians, stds, means = [], [], []
+    for i, x_jet in enumerate(x_jets):
+        x_jet = dc.replace_missing_with_nan(x_jet)
+        x_jet = dc.drop_x_features(x_jet, i)
+        x_jet = dc.replace_outliers_with_nan(x_jet)
+        # Compute medians and use them in place of NaNs
+        medians.append(np.nanmedian(x_jet, axis=0))
+        x_jet = dc.replace_nan_with_medians(x_jet, medians[i])
+        # Apply feature engineering methods
+        x_jet = fe.feature_expand(x_jet, i)
+        stds.append(np.std(x_jet, axis=0))
+        x_jet, stds[i] = dc.remove_useless_columns(x_jet, stds[i])
+        means.append(np.mean(x_jet, axis=0))
+        x_jet = dc.standardize(x_jet, means[i], stds[i])
+        x_jets[i] = x_jet
+    return y_jets, x_jets, means, stds, medians
+
+
+def prepare_test_data(x, means, stds, medians):
+    x_jets = dc.split_test_data(x)
+
+    for i, x_jet in enumerate(x_jets):
+        x_jet = dc.replace_missing_with_nan(x_jet)
+        x_jet = dc.drop_x_features(x_jet, i)
+        x_jet = dc.replace_nan_with_medians(x_jet, medians[i])
+        # Apply feature engineering methods
+        x_jet = fe.feature_expand(x_jet, i)
+        x_jet = dc.standardize(x_jet, means[i], stds[i])
+        x_jets[i] = x_jet
+    return x_jets

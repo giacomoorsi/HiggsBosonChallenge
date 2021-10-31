@@ -32,12 +32,12 @@ def main() :
     OUTPUT_PATH = "out.csv"
 
     y, tX, _ = load_csv_data(DATA_TRAIN_PATH)
-    x_jets, y_jets, replacing_values, means, stds = prepare_train_data(tX, y)
+    y_jets, x_jets, replacing_values, means, stds = prepare_train_data(tX, y)
 
     w = compute_weights(x_jets, y_jets, models)
 
     _, tX_test, ids_test = load_csv_data(DATA_TEST_PATH)
-    tX_test_jets = prepare_test_data(replacing_values, means, stds)
+    x_test_jets = prepare_test_data(replacing_values, means, stds)
 
     y_pred = compute_predictions(tX_test[:, JET_COLUMN_INDEX], tX_test, w)
 

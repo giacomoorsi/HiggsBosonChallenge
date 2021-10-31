@@ -1,9 +1,9 @@
 import numpy as np
 
 from expansions import polynomial_expansion
-from implementations import ridge_regression, logistic_regression_penalized_gradient_descent
-from scripts.proj1_helpers import predict_labels
-
+from implementations import ridge_regression#, logistic_regression_penalized_gradient_descent
+from proj1_helpers import predict_labels
+from logistic_regression import logistic_regression_penalized_gradient_descent
 
 def compute_weights(tX, y, models) : 
     """Computes the weights for each jet model

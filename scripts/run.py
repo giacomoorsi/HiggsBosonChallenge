@@ -42,3 +42,6 @@ def main() :
     y_pred = compute_predictions(x_test_jets, w_jets, models, tX_test[:, JET_COLUMN_INDEX])
 
     create_csv_submission(ids_test, y_pred, OUTPUT_PATH)
+
+
+if __name__ == "__main__" : main()

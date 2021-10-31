@@ -32,12 +32,11 @@ import numpy as np
 
 
 def get_featureMeaning_index(jet_num):
-    index_label = {'mass': [], 'energy': [], 'momentum': [], \
-        'eta': [], 'centrality': [], 'angle': [], 'ratio': []}
+    index_label = {'mass': [], 'energy': [], 'momentum': []}
     if jet_num == 0:
         index_label['mass']       = [0,1,2]
         index_label['energy']     = [15,17]
-        index_label['momentum']   = [3,5,6,9,12,18]
+        index_label['momentum']   = [3,5,6,9,12]    # Last entry "PRI_jet_all_pt" is always 0, so exclude 18
     elif jet_num == 1:
         index_label['mass']       = [0,1,2]
         index_label['energy']     = [15,17]

@@ -4,6 +4,14 @@ import feature_engineering as fe
 
 
 def prepare_train_data(y, x):
+    """
+    Execute entire data preparation pipeline.
+
+    :param y: y train vector.
+    :param x: x train matrix.
+    :return: two 3-element arrays corresponding to y and x train split into jet numbers, and means/stds/medians for
+    all features
+    """
     print("Preparing training data...")
     y_jets, x_jets = dc.split_train_data(y, x)
 

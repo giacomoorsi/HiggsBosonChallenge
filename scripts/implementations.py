@@ -3,71 +3,233 @@ import math
 from helper import *
 
 def compute_loss_mse(y, tx, w):
-    """Calculate the loss using mean square error"""
-    e = y - np.matmul(tx, np.array(w).T)
+    """Calculate the loss using mean square error
+    Inputs:
+    - y  : True answer (N by 1 vector)
+    - tx : Data (N by d matrix)
+    - w  : Weight vector (d by 1 vector)
+
+    Output:
+    - loss : mean square loss (scalar)
+    """
+    e = y - np.matmul(tx, w)
     return (1/(2*len(y)))*np.matmul(e.T, e)
+
+def mse_to_rmse(mse):
+    """Return the rmse given the mse value"""
+    return math.sqrt(2*mse)
 
 
 def compute_loss_mae(y, tx, w):
-    """Calculate the loss using mean absolute error"""
+    """Calculate the loss using mean absolute error
+    Inputs:
+    - y  : True answer (N by 1 vector)
+    - tx : Data (N by d matrix)
+    - w  : Weight vector (d by 1 vector)
+
+    Output:
+    - loss : mean absolute value loss (scalar)
+    """
     return sum(math.abs(y-np.matmul(tx,w)))/len(y)
 
-def compute_loss(y,tx,w) : 
-    return compute_loss_mse(y,tx,w)
 
 def compute_gradient_lse(y, tx, w):
-    """Compute the gradient."""
+    """Compute the gradient of least squares loss function.
+    Inputs:
+    - y  : True answer (N by 1 vector)
+    - tx : Data (N by d matrix)
+    - w  : Weight vector (d by 1 vector)
+
+    Output:
+    - Gradient : The gradient of least squares loss function (d by 1 vector)
+    """
     e = y-np.dot(tx,w)
     return - 1/len(y) * np.dot(tx.T, e)
 
-def gradient_descent(y, tx, initial_w, max_iters, gamma):
-    """Gradient descent algorithm."""
-    ws = [initial_w]
-    losses = []
+def least_squares_GD(y, tx, initial_w, max_iters, gamma):
+    """Gradient descent algorithm for least squares loss function.
+    Inputs:
+    - y  : True answer (N by 1 vector)
+    - tx : Data (N by d matrix)
+    - initial_w : The initial weight vector (d by 1 vector)
+    - max_iters : The number of iterations/steps to execute gradient descend (integer)
+    - gamma : Learning rate (scalar)
+
+    Outputs:
+    - w : The weight vector after gradient descend exploration  (d by 1 vector)
+    - loss : The final loss corresponds to the final weight 'w' (scalar)
+    """
+    # Initialize the weight to start
     w = initial_w
+
     for n_iter in range(max_iters):
         grad = compute_gradient_lse(y, tx ,w)
-        # print("grad: ", grad)
-        loss = compute_loss(y, tx, w)
+        # Update the current weight using step size 'gamma' and current gradient
         w = w - gamma * grad 
-        # print("Gradient Descent({bi}/{ti}): loss={l}, w0={w0}, w1={w1}".format(bi=n_iter, ti=max_iters - 1, l=loss, w0=w[0], w1=w[1]))
-        ws.append(w)
-        losses.append(loss)
-    return losses, ws
 
-def stochastic_gradient_descent(y, tx, initial_w, batch_size, max_iters, gamma):
-    """Stochastic gradient descent algorithm."""
+    # Compute the loss after obtain the final weight
+    loss = compute_loss_mse(y, tx, w)
+
+    return w, mse_to_rmse(loss)
+
+
+def least_squares_SGD(y, tx, initial_w, max_iters, gamma):
+    """Stochastic gradient descent algorithm for least squares loss, and batch size = 1
+    Inputs:
+    - y  : True answer (N by 1 vector)
+    - tx : Data (N by d matrix)
+    - initial_w : The initial weight vector (d by 1 vector)
+    - max_iters : The number of iterations/steps to execute gradient descend (integer)
+    - gamma : Learning rate (scalar)
+
+    Outputs:
+    - w : The weight vector after gradient descend exploration  (d by 1 vector)
+    - loss : The final loss corresponds to the final weight 'w' (scalar)
+    """
     
-    ws = [initial_w]
-    losses = []
+    # Initialize the weight to start
     w = initial_w
     for n_iter in range(max_iters) : 
-        for minibatch_y, minibatch_tx in batch_iter(y, tx, batch_size) : 
+        # Batch size is always equals to 1
+        for minibatch_y, minibatch_tx in batch_iter(y, tx, batch_size=1) : 
+            # Compute the gradient by the given minibatch y & tx
             grad = compute_gradient_lse(minibatch_y, minibatch_tx, w)
-            loss = compute_loss(y, tx, w)
+            # Update the current weight using step size 'gamma' and current gradient
             w = w - gamma * grad 
-            print("Gradient Descent({bi}/{ti}): loss={l}, w0={w0}, w1={w1}".format( bi=n_iter, ti=max_iters - 1, l=loss, w0=w[0], w1=w[1]))
-            ws.append(w)
-            losses.append(loss)
+
+    # Compute the loss after obtain the final weight
+    loss = compute_loss_mse(y, tx, w)
     
-    return losses, ws
+    return w, mse_to_rmse(loss)
 
-# Least squares fitting
 
-def least_squares(y, tx, rmse=0):
-    """calculate the least squares solution."""
+
+def least_squares(y, tx):
+    """Calculate the least squares solution with the closed form linear equations.
+    Inputs:
+    - y  : True answer (N by 1 vector)
+    - tx : Data (N by d matrix)
+
+    Output:
+    - w : The weight vector after gradient descend exploration  (d by 1 vector)
+    - loss : The mean square loss for this optimal 'w'
+    """
+    # Solve w for equation (tx^T * tx) * w = t^T * y
     w = np.linalg.solve(tx.T @ tx, tx.T @ y)
-    mse = compute_loss_mse(y, tx, w)
-    if rmse : 
-        mse = math.sqrt(2*mse)
-        return mse, w
-    else :
-        return mse, w
+    loss = compute_loss_mse(y, tx, w)
+    
+    return w, mse_to_rmse(loss)
 
 
 
 def ridge_regression(y, tx, lambda_) :
+    """Calculate the least squares solution with a regularization given parameter lambda_
+    Inputs:
+    - y  : True answer (N by 1 vector)
+    - tx : Data (N by d matrix)
+    - lambda_ : The regularization parameter
+
+    Output:
+    - w : The weight vector after gradient descend exploration  (d by 1 vector)
+    - loss : The mean square loss for this optimal 'w'
+    """
+    # Get the dimension of the data matrix tx
     n, d = tx.shape
     w = np.zeros(d)
-    w = np.linalg.solve(tx.T @ tx + n * lambda_ * np.eye(d), tx.T @ y)
-    return w, 1 / (2 * n) * np.sum((y - tx @ w) ** 2) + lambda_ / 2 * w.T.dot(w)
+    # Solve the linear function tx^T * (tx + 2n*lambda_*I) * w = tx^T * y
+    w = np.linalg.solve(tx.T @ tx + 2 * n * lambda_ * np.eye(d), tx.T @ y)
+
+    loss = compute_loss_mse(y, tx, w)
+
+    return w, mse_to_rmse(loss)
+
+
+def sigmoid(t):
+    """Apply the sigmoid function on t."""
+    out = np.ones((len(t), 1))
+    to_be_computed = np.logical_and(t < 30, t > -30)
+    out[to_be_computed] = 1 / (1 + np.exp(-t[to_be_computed]))
+    out[t > -30] = 0
+    return out
+
+
+def compute_loss_logistic(y, tx, w):
+    """Compute the loss: negative log likelihood for logistic regression"""
+    prod = tx @ w
+    a = prod
+    # Consider function a = log(1 + exp(prod)),
+    #   if prod is too small, it's close to log(1) = 0
+    a[prod < (-10)] = 0
+    #   if prod is large, it's close to log(exp(prod)) = prod
+    a[prod > 10] = prod[prod > 10]
+    # The rest goes to regular computation
+    incl = np.logical_and(prod >= -10, prod <= 10)
+    a[incl] = np.log(1 + np.exp(prod[incl]))
+
+    b = y * prod
+
+    return sum(a - b)
+
+
+def compute_gradient_logistic(y, tx, w):
+    """Compute the gradient of logistic regression with negative log likelihood loss function."""
+    return tx.T @ (sigmoid(tx @ w) - y)
+
+def compute_gradient_reg_logistic(y, tx, w, lambda_):
+    """Compute the gradient of regularized logistic regression with negative log likelihood loss function."""
+    return compute_gradient_logistic(y, tx, w) + 2*lambda_*w
+
+
+def logistic_regression(y, tx, initial_w, max_iters, gamma):
+    """Gradient descent algorithm for negative log likelihood loss function.
+    Inputs:
+    - y  : True answer (N by 1 vector)
+    - tx : Data (N by d matrix)
+    - initial_w : The initial weight vector (d by 1 vector)
+    - max_iters : The number of iterations/steps to execute gradient descend (integer)
+    - gamma : Learning rate (scalar)
+
+    Outputs:
+    - w : The weight vector after gradient descend exploration  (d by 1 vector)
+    - loss : The final loss corresponds to the final weight 'w' (scalar)
+    """
+    # Initialize the weight to start
+    w = initial_w
+
+    for n_iter in range(max_iters):
+        grad = compute_gradient_logistic(y, tx ,w)
+        # Update the current weight using step size 'gamma' and current gradient
+        w = w - gamma * grad 
+
+    # Compute the loss after obtain the final weight
+    loss = compute_loss_logistic(y, tx, w)
+
+    return w, loss
+
+
+def reg_logistic_regression(y, tx, lambda_, initial_w, max_iters, gamma):
+    """Gradient descent algorithm for negative log likelihood loss function.
+    Inputs:
+    - y  : True answer (N by 1 vector)
+    - tx : Data (N by d matrix)
+    - lambda_   : The regularization parameter
+    - initial_w : The initial weight vector (d by 1 vector)
+    - max_iters : The number of iterations/steps to execute gradient descend (integer)
+    - gamma : Learning rate (scalar)
+
+    Outputs:
+    - w : The weight vector after gradient descend exploration  (d by 1 vector)
+    - loss : The final loss corresponds to the final weight 'w' (scalar)
+    """
+    # Initialize the weight to start
+    w = initial_w
+
+    for n_iter in range(max_iters):
+        grad = compute_gradient_reg_logistic(y, tx ,w, lambda_)
+        # Update the current weight using step size 'gamma' and current gradient
+        w = w - gamma * grad 
+
+    # Compute the loss after obtain the final weight
+    loss = compute_loss_logistic(y, tx, w)
+
+    return w, loss

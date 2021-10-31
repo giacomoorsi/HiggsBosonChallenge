@@ -25,9 +25,10 @@ def save_data(training_method, jet_string, degrees, lambdas, results):
 def load_np_array(folder_name, selection):
     """
     Load the degrees array used for training.
+
     :param selection: specify with 'd', 'l', or 'r' if you want to load the degrees/lambdas/results arrays.
     :param folder_name: specify the training session from which to recover information.
-    :return: numpy one-dimensional array.
+    :return: one-dimensional numpy array.
     """
     if selection == 'd':
         file_name = 'degrees.npy'

@@ -20,8 +20,8 @@ def compute_weights(tX, y, models) :
 
     for i, (jet, model) in enumerate(models.items()) : 
         x_expanded = polynomial_expansion(tX[i], model["degree"], mixed_columns = model["mixed"])
-
-        if model["model"] == "least squares" : 
+        print("Training with {}...".format(model['model']))
+        if model["model"] == "least squares" :
             w, err = ridge_regression(y[i], x_expanded, model["lambda"])
             weights.append(w)
         elif model["model"] == "logistic regression" : 
@@ -45,7 +45,7 @@ def compute_predictions(x_tests_jets, w_jets, models, jet_indices) :
 
     y_predicted = np.zeros((len(jet_indices), 1))
     y_predicted_jet = []
-    for (i, model) in enumerate(models) : 
+    for i, (jet, model) in enumerate(models.items()) :
         x_expanded_jet = polynomial_expansion(x_tests_jets[i], model["degree"], mixed_columns=model["mixed"])
         y_predicted_jet.append(predict_labels(w_jets[i], x_expanded_jet))
 

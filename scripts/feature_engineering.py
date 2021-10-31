@@ -1,6 +1,7 @@
 import numpy as np
 
 def feature_expand(x_jet, jet_num):
+    print("Executing feature engineering pipeline...")
     x_total = feature_to_energy(x_jet, jet_num)
     x_total = np.concatenate((x_total, add_features(x_jet, jet_num)), axis=1)
 
@@ -20,7 +21,7 @@ def feature_to_energy(x_jet, jet_num):
     energy_term = x_jet[:, index_label['energy']]
     tX_energy = np.c_[energy_term, np.power(energy_term, 2)]
 
-    tX_total = np.concatenate((np.ones((x_jet.shape[0], 1)), tX_mass, tX_momentum, tX_energy), axis=1)
+    tX_total = np.concatenate((tX_mass, tX_momentum, tX_energy), axis=1)
 
     return tX_total
 
@@ -31,7 +32,7 @@ def get_feature_meaning_index(jet_num):
     if jet_num == 0:
         index_label['mass']       = [0,1,2]
         index_label['energy']     = [15,17]
-        index_label['momentum']   = [3,5,6,9,12,18]
+        index_label['momentum']   = [3,5,6,9,12]
     elif jet_num == 1:
         index_label['mass']       = [0,1,2]
         index_label['energy']     = [15,17]

@@ -23,6 +23,7 @@ def split_train_data(y, x):
     x_jet0 = x[jet0_mask]
     x_jet1 = x[jet1_mask]
     x_jet2 = x[jet2_mask]
+    print("tX and y matrices split into 3 sub-matrices, depending on jet number.")
     return [y_jet0, y_jet1, y_jet2], [x_jet0, x_jet1, x_jet2]
 
 

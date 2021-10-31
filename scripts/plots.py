@@ -11,6 +11,13 @@ matplotlib.rcParams.update({'font.size': 22})
 
 
 def plot_degree_errors_plt(degrees, lambdas, results):
+    """
+    Create and save a plot to visualize degrees as lines which relate lambdas with accuracy results.
+
+    :param degrees: array of degrees analyzed.
+    :param lambdas: array of lambdas analyzed.
+    :param results: matrix of classification results.
+    """
     plt.figure(figsize=(8, 6), dpi=80)
     for i, deg in enumerate(degrees):
         accuracy = results[i]

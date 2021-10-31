@@ -1,16 +1,25 @@
 import numpy as np
-import math
 from cross_validation import build_k_indices
 from proj1_helpers import predict_labels
 
 
 def ridge_regression(y, tx, lambda_) :
+    """Ridge regression implementation"""
     n, d = tx.shape
     w = np.zeros(d)
     w = np.linalg.solve(tx.T @ tx + n * lambda_ * np.eye(d), tx.T @ y)
     return w, 1 / (2 * n) * np.sum((y - tx @ w) ** 2) + lambda_ / 2 * w.T.dot(w)
 
-def cross_validate_least_squares(y, tx, lambda_, k_fold) : 
+def cross_validate_least_squares(y, tx, lambda_, k_fold) :
+    """
+    Cross validation with Ridge least squares.
+
+    :param y: results matrix.
+    :param tx: observations matrix.
+    :param lambda_: lambda parameter used in the penalization term.
+    :param k_fold: number of fold splittings in the cross validation.
+    :return: mean of the classification results from all iterations of the cross validation.
+    """
     seed = 1
     k_indices = build_k_indices(y, k_fold, seed)
     classifications = []

@@ -34,11 +34,11 @@ def main() :
     y, tX, _ = load_csv_data(DATA_TRAIN_PATH)
     y_jets, x_jets, replacing_values, means, stds = prepare_train_data(tX, y)
 
-    w = compute_weights(x_jets, y_jets, models)
+    w_jets = compute_weights(x_jets, y_jets, models)
 
     _, tX_test, ids_test = load_csv_data(DATA_TEST_PATH)
     x_test_jets = prepare_test_data(replacing_values, means, stds)
 
-    y_pred = compute_predictions(tX_test[:, JET_COLUMN_INDEX], tX_test, w)
+    y_pred = compute_predictions(x_test_jets, w_jets, models, tX_test[:, JET_COLUMN_INDEX])
 
     create_csv_submission(ids_test, y_pred, OUTPUT_PATH)

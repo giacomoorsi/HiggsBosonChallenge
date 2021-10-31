@@ -43,8 +43,6 @@ Create the models for predicting the labels for new data points without true lab
 ### `expansions.py`
 Contains a function to apply polynomial expansion to our features to add extra degree of freedom for our models.
 
-### `helper.py`
-Contains the batch iteration function for the function `least_squares_SGD` in `implementations.py`. Also contains other functions for ploting figures. Note that we need `matplotlib`if you want to use these ploting functions.
 
 ### `run.py`
 Generates the submission `.csv` file based on the data of `test.csv` stored in the folder `data/`. Our optimized model is also defined in this file.

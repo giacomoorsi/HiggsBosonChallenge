@@ -1,13 +1,14 @@
 # ML project 1 - Novae
-This project is the Project 1 of **EPFL CS-433 Machine Learning**. The project is the same as the **Higgs Boson Machine Learning Challenge** as that on [Kaggle](https://www.kaggle.com/c/higgs-boson).
+This project is the Project 1 of **EPFL CS-433 Machine Learning**. The project is the same as the **Higgs Boson Machine Learning Challenge** which is on [Kaggle](https://www.kaggle.com/c/higgs-boson). The dataset and the detailed description can also be found at [the GitHub respository of the course](https://github.com/epfml/ML_course/tree/master/projects/project1).
 
-The dataset and the detailed description can also be found at [the GitHub respository of the course](https://github.com/epfml/ML_course/tree/master/projects/project1).
+The task of this project is to train a model based on the provided `train.csv` to have a best prediction on the data given in `test.csv` or any other general case.
 
+We built our model the problem using regularized linear regression after applying some data cleaning and features engineering techniques. At the end we obtained 0.82 accuracy and an F1 score of 0.76 on the `test.csv` dataset.
 ## Instruction
 * The project runs under `Python 3.8?` and requires `NumPy=1.19`.
 * Please ensure that `test.csv` is placed inside the `data` folder. If not, please download it from the course website or Kaggle mentioned above.
 
-* Go to the `script/` folder and execute `run.py`.
+* Go to the `script/` folder and execute `run.py`. A submission file will be generated as `out.csv`.
 
 ---
 ## Modules
@@ -43,7 +44,7 @@ Create the models for predicting the labels for new data points without true lab
 Contains a function to apply polynomial expansion to our features to add extra degree of freedom for our models.
 
 ### `helper.py`
-The batch iteration function for the function `least_squares_SGD` in `implementations.py`. Also contains other functions for ploting figures. Note that we need `matplotlib`if you want to use these ploting functions.
+Contains the batch iteration function for the function `least_squares_SGD` in `implementations.py`. Also contains other functions for ploting figures. Note that we need `matplotlib`if you want to use these ploting functions.
 
 ### `run.py`
-Generates the submission `.csv` file based on the `test.csv` stored in the folder `data`
+Generates the submission `.csv` file based on the data of `test.csv` stored in the folder `data/`. Our optimized model is also defined in this file.

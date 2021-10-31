@@ -159,10 +159,31 @@ def fix_missing_values(x):
     return x
 
 
-def fix_nan_values(x):
-    x = np.nan_to_num(x)
+def fix_nan_values(x, medians):
+    #x = np.nan_to_num(x)
+    for i in range(x.shape[1]) : 
+        x[:,i] = np.nan_to_num(x[:,i], nan=medians[i])
     return x
 
+def standardize(x, means, stds) : 
+    for i in range(x.shape[1]) : 
+        x[:,i] = (x[:,i] - means[i])/stds[i]
+    return x
+
+def identify_outliers(x, keep=0.95) :
+    """Replace outliers with NaN"""
+    for i in range(x.shape[1]) : 
+        min_value = np.quantile(x[:, i],(1-keep)/2)
+        max_value = np.quantile(x[:, i],(1+keep)/2)
+        values_to_be_changed = np.logical_or(x[:, i]<min_value, x[:, i]>max_value)
+        x[values_to_be_changed, i] = np.nan
+    return x
+ 
+def remove_useless_columns(x, stds) : 
+    """Removes columns with standard deviation == 0"""
+    x = np.delete(x, np.where(stds == 0), axis=1)
+    stds = stds[stds!=0]
+    return x, stds
 
 
 ## Usage

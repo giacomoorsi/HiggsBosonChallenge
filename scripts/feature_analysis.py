@@ -99,9 +99,10 @@ def addFeat(filt_x, jet_num):
     mass_trans_met = np.c_[ filt_x[:,index_entry] * filt_x[:,1], filt_x[:,index_entry] * np.power(filt_x[:,1], 2) ]
 
     # momentum
-    momentum_trans_met = np.c_[ filt_x[:,index_entry] * filt_x[:,momentum_index], filt_x[:,index_entry] * np.power(filt_x[:,momentum_index], 2) ]
+    momentum_trans_met3 = np.c_[ filt_x[:,index_entry] * filt_x[:,3], filt_x[:,index_entry] * np.power(filt_x[:,3], 2) ]
+    momentum_trans_met8 = np.c_[ filt_x[:,index_entry] * filt_x[:,momentum_index], filt_x[:,index_entry] * np.power(filt_x[:,momentum_index], 2) ]
 
-    tx_total = np.c_[ tx_total ,mass_trans_met, momentum_trans_met ]
+    tx_total = np.c_[ tx_total ,mass_trans_met, momentum_trans_met3, momentum_trans_met8 ]
 
 
     # Consider entry 4,5,6,12. As they are a pair
@@ -186,9 +187,25 @@ def remove_useless_columns(x, stds) :
     return x, stds
 
 
-## Usage
+## Usage of "fill_mass_MMC" ##
 # new_tx = fill_mass_MMC(test_dataset, train_dataset, train_answer [,alpha])
 #
+# 'new_tx' will be the same content as 'test_dataset' but filling the missing values in the first column
+#     with the values inferred from the 'train_dataset'
+#
+# For training, one can write:
+# '''
+# new_tx = fill_mass_MMC(tX_train, tX_train, train_answer)
+# '''
+# to fill the missing values.
+#
+# For testing, one can write
+# '''
+# new_tx = fill_mass_MMC(tX_test, tX_train, train_answer)
+# '''
+# to fille the missing values for the testing dataset.
+#
+# **NOTE**
 # This should be done before any preprocessing, the input dataset must be the original one
 ###############
 

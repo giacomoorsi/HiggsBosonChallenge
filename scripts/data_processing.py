@@ -5,7 +5,7 @@ import feature_engineering as fe
 
 def prepare_train_data(y, x):
     """
-    Execute entire data preparation pipeline.
+    Execute entire data preparation pipeline designed for training data.
 
     :param y: y train vector.
     :param x: x train matrix.
@@ -38,6 +38,16 @@ def prepare_train_data(y, x):
 
 
 def prepare_test_data(x, means, stds, medians):
+    """
+    Execute entire data preparation pipeline designed for testing data.
+
+    :param x: observations matrix.
+    :param means: array of means from the training dataset.
+    :param stds: array of standard deviations from the training dataset.
+    :param medians: array of medians from the training dataset.
+    :return: array of three subsets, which are the division of the test dataset
+    split among jet numbers.
+    """
     print("Preparing testing data...")
     x_jets = dc.split_test_data(x)
 

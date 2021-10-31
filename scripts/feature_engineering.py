@@ -1,6 +1,13 @@
 import numpy as np
 
 def feature_expand(x_jet, jet_num):
+    """
+    Execute physics processing to the dataset.
+
+    :param x_jet: x subset with a unique jet number.
+    :param jet_num: jet number identifier.
+    :return: processed x subset.
+    """
     print("Executing feature engineering pipeline...")
     x_total = feature_to_energy(x_jet, jet_num)
     x_total = np.concatenate((x_total, add_features(x_jet, jet_num)), axis=1)
@@ -9,7 +16,13 @@ def feature_expand(x_jet, jet_num):
 
 
 def feature_to_energy(x_jet, jet_num):
-    """Assign function to every label to match the units of energy^2"""
+    """
+    Assign function to every label to match the units of energy^2
+
+    :param x_jet: x subset with a unique jet number.
+    :param jet_num: jet number identifier.
+    :return: processed x subset.
+    """
     index_label = get_feature_meaning_index(jet_num)
 
     mass_term = x_jet[:, index_label['mass']]
@@ -27,6 +40,12 @@ def feature_to_energy(x_jet, jet_num):
 
 
 def get_feature_meaning_index(jet_num):
+    """
+    Return indexes of measurements features depending on the jet number.
+
+    :param jet_num: jet number identifier.
+    :return: dictionary containing physics information.
+    """
     index_label = {'mass': [], 'energy': [], 'momentum': [],
                    'eta': [], 'centrality': [], 'angle': [], 'ratio': []}
     if jet_num == 0:
@@ -45,7 +64,13 @@ def get_feature_meaning_index(jet_num):
 
 
 def add_features(x_jet, jet_num):
-    """Consider the attributes of other features, such as angle, eta, centrality"""
+    """
+    Consider the attributes of other features, such as angle, eta, centrality
+
+    :param x_jet: x subset with a unique jet number.
+    :param jet_num: jet number identifier.
+    :return: processed x subset.
+    """
 
     # Consider entry 7. DER_deltar_tau_lep & 10. DER_pt_ratio_lep_tau are related to hadronic tau and lepton
     index_entry = (7, 10) if jet_num > 1 else (4, 7)

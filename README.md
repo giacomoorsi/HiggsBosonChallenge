@@ -8,12 +8,12 @@ This project is the Project 1 of **EPFL CS-433 Machine Learning**. The project i
 
 The task of this project is to train a model based on the provided `train.csv` to have the best prediction on the data given in `test.csv` or any other general case.
 
-We built our model for the problem using regularized linear regression after applying some data cleaning and features engineering techniques. In the end, we obtained an accuracy of 0.82 and an F1 score of 0.76 on the `test.csv` dataset.
+We built our model for the problem using regularized linear regression after applying some data cleaning and features engineering techniques. A report describing our approach and our results can be found in the file `report.pdf`. In the end, we obtained an accuracy of 0.82 and an F1 score of 0.76 on the `test.csv` dataset.
+
 ## Instruction
 * The project runs under `Python 3.8` and requires `NumPy=1.19`.
-* Please make sure to place `test.csv` inside the `data` folder. If not, please download it from the course website or Kaggle mentioned above.
-
-* Go to the `script/` folder and execute `run.py`. A submission file will be generated as `out.csv`.
+* Please make sure to place `train.csv` and `test.csv` inside the `data` folder. If not, please download those files from the course website or Kaggle mentioned above.
+* Go to the `script/` folder and execute `run.py`. A model will be trained with the given hyper-parameters and predictions for the test dataset will be outputed in the file `out.csv`.
 
 ---
 ## Modules
@@ -55,3 +55,8 @@ Contains functions which loads the `.csv` files as training or testing data, and
 Contains a function to build the index for k-fold cross_validation.
 * `disk_helper.py`:
 Save/load the NumPy array to disk for further usage. Useful for saving hyper-parameters when trying a long training process.
+
+--
+## Notebook
+It is possible to use the Jupyter notebook `project_notebook.ipynb` located in the `scripts` folder to train the best hyper-parameters for the model. 
+In the notebook it is possible to cross-validate a logistic and a least square regression model over given lambdas and degrees. 

@@ -22,7 +22,7 @@ def prepare_train_data(y, x):
         print("Removing values and dealing with outliers in tX with jet number {}...".format(i))
         x_jet = dc.replace_missing_with_nan(x_jet)
         x_jet = dc.drop_x_features(x_jet, i)
-        x_jet = dc.replace_outliers_with_nan(x_jet)
+        #x_jet = dc.replace_outliers_with_nan(x_jet)
         # Compute medians and use them in place of NaNs
         medians.append(np.nanmedian(x_jet, axis=0))
         x_jet = dc.replace_nan_with_medians(x_jet, medians[i])

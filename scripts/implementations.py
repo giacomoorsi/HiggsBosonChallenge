@@ -94,7 +94,7 @@ def least_squares_GD(y, tx, initial_w, max_iters, gamma):
 
     # Compute the loss after obtain the final weight
     loss = compute_loss_mse(y, tx, w)
-
+    
     return w, mse_to_rmse(loss)
 
 

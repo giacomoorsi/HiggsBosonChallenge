@@ -35,7 +35,7 @@ Calls the following files to process the data.
 * `data_cleaning.py`:
 Contains functions used to
     1. Categorize data into subgroups.
-    2. Replace missing values and outliers with the median.
+    2. Replace missing values with the median.
     3. Standardize the features.
 * `feature_engineering.py`:
 Contains functions used to generate our interpretable features.

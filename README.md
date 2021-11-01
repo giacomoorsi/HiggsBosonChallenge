@@ -10,7 +10,7 @@ The task of this project is to train a model based on the provided `train.csv` t
 
 We built our model for the problem using regularized linear regression after applying some data cleaning and features engineering techniques. A report describing our approach and our results can be found in the file `report.pdf`. In the end, we obtained an accuracy of 0.836 and an F1 score of 0.751 on the `test.csv` dataset.
 
-## Instruction
+## Instructions
 * The project runs under `Python 3.8` and requires `NumPy=1.19`.
 * Please make sure to place `train.csv` and `test.csv` inside the `data` folder. If not, please download those files from the course website or Kaggle mentioned above.
 * Go to the `script/` folder and execute `run.py`. A model will be trained with the given hyper-parameters and predictions for the test dataset will be outputed in the file `out.csv`.

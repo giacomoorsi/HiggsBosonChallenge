@@ -3,12 +3,12 @@ from models import compute_weights, compute_predictions
 from proj1_helpers import create_csv_submission, load_csv_data
 
 models =  {
-    "jet0" : {
-        "model" : "least squares",
-        "degree" : 6,
-        "lambda" : 1e-7,
-        "mixed" : True,
-        "accuracy" : 0.0
+    "jet0" : { # the subset of the dataset
+        "model" : "least squares", # the model to be used ["least squares" or "logistic regression"]
+        "degree" : 6, # the degree of polynomial expansion to be used
+        "lambda" : 1e-7, # the lambda to be used in the ridge regression
+        "mixed" : True, # if true, pair products of the features will be added to the dataset (but will not be elevated in polynomial expansion)
+        "accuracy" : 0.8476 # accuracy on a 4-fold cross validation on train dataset, just for reference
     },
     
     "jet1" : {
@@ -16,16 +16,16 @@ models =  {
         "degree" : 7,
         "lambda" : 1e-6,
         "mixed" :  True,
-        "accuracy" : 0.0  
+        "accuracy" : 0.8193  
     },
     "jet2" : {
         "model" : "least squares",
         "degree" : 7,
         "lambda" : 1e-5,
         "mixed" : True,
-        "accuracy" : 0 
+        "accuracy" : 0.8378 
     }
-} # Accuracy on test dataset: 0.836, F1: 0.751 
+} # Accuracy on test dataset on AICrowd: 0.836, F1: 0.751 
 
 
 

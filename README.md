@@ -1,4 +1,4 @@
-# ML project 1 - Novae
+# A method to solve the Higgs boson challenge using Least Squares - Novae
 This project is the Project 1 of **EPFL CS-433 Machine Learning**. The project is the same as the **Higgs Boson Machine Learning Challenge** posted on [Kaggle](https://www.kaggle.com/c/higgs-boson). The dataset and the detailed description can also be found in [the GitHub repository of the course](https://github.com/epfml/ML_course/tree/master/projects/project1).
 
 `Team name`: Novae

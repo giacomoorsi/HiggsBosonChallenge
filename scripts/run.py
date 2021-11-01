@@ -2,29 +2,30 @@ from data_processing import prepare_train_data, prepare_test_data
 from models import compute_weights, compute_predictions
 from proj1_helpers import create_csv_submission, load_csv_data
 
-models = {
+models =  {
     "jet0" : {
         "model" : "least squares",
-        "degree" : 4,
-        "lambda" : 1e-10,
+        "degree" : 6,
+        "lambda" : 1e-7,
         "mixed" : True,
-        "accuracy" : 0.8470
+        "accuracy" : 0.0
     },
+    
     "jet1" : {
         "model" : "least squares",
-        "degree" : 6,
-        "lambda" : 1e-3,
+        "degree" : 7,
+        "lambda" : 1e-6,
         "mixed" :  True,
-        "accuracy" : 0.8069
+        "accuracy" : 0.0  
     },
     "jet2" : {
         "model" : "least squares",
-        "degree" : 4,
-        "lambda" : 1e-4,
+        "degree" : 7,
+        "lambda" : 1e-5,
         "mixed" : True,
-        "accuracy" : 0.8342
+        "accuracy" : 0 
     }
-}
+} # Accuracy on test dataset: 0.836, F1: 0.751 
 
 
 

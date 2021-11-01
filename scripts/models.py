@@ -43,6 +43,7 @@ def compute_predictions(x_tests_jets, w_jets, models, jet_indices) :
         The list of predictions 
     """
 
+    print("Compute predictions...")
     y_predicted = np.zeros((len(jet_indices), 1))
     y_predicted_jet = []
     for i, (jet, model) in enumerate(models.items()) :

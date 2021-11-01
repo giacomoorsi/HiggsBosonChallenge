@@ -2,7 +2,7 @@
 """Logistic regression functions"""
 
 import math
-from logistic_regression_helpers import *
+import numpy as np
 from cross_validation import build_k_indices
 from proj1_helpers import predict_labels
 

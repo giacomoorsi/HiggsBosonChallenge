@@ -56,7 +56,8 @@ Contains a function to build the index for k-fold cross_validation.
 * `disk_helper.py`:
 Save/load the NumPy array to disk for further usage. Useful for saving hyper-parameters when trying a long training process.
 
---
+---
+
 ## Notebook
 It is possible to use the Jupyter notebook `project_notebook.ipynb` located in the `scripts` folder to train the best hyper-parameters for the model. 
 In the notebook it is possible to cross-validate a logistic and a least square regression model over given lambdas and degrees. 
